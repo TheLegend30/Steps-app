@@ -4,7 +4,7 @@ const messages = ["Learn Nothing ⚛️", "Be homeless 💼", "Git money🤑"];
 
 export default function App() {
   // return <Steps />;
-  return <Counter />;
+  return <Steps />;
 }
 
 function Steps() {
@@ -65,47 +65,55 @@ function Steps() {
   );
 }
 
-function Counter() {
-  const [step, setStep] = useState(0);
-  const [count, setCount] = useState(0);
+// function Counter() {
+//   const [step, setStep] = useState(0);
+//   const [count, setCount] = useState(0);
 
-  function handleStepSub() {
-    setStep((s) => s - 1);
-  }
+//   const currentDate = new Date();
+//   currentDate.setDate(currentDate.getDate() + count);
 
-  function handleStepAdd() {
-    setStep((s) => s + 1);
-  }
+//   function handleStepSub() {
+//     setStep((s) => s - 1);
+//   }
 
-  function handleCountSub() {
-    setCount((c) => c - step);
-  }
+//   function handleStepAdd() {
+//     setStep((s) => s + 1);
+//   }
 
-  function handleCountAdd() {
-    setCount((c) => c + step);
-  }
+//   function handleCountSub() {
+//     setCount((c) => c - step);
+//   }
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
-      <div>
-        <button onClick={handleStepSub}>-</button>
-        <span>Step: {step}</span>
-        <button onClick={handleStepAdd}>+</button>
-      </div>
-      <div>
-        <button onClick={handleCountSub}>-</button>
-        <span>Count: {count}</span>
-        <button onClick={handleCountAdd}>+</button>
-      </div>
-      <div>
-        {} is {}
-      </div>
-    </div>
-  );
-}
+//   function handleCountAdd() {
+//     setCount((c) => c + step);
+//   }
+
+//   return (
+//     <div
+//       style={{
+//         display: "flex",
+//         alignItems: "center",
+//         flexDirection: "column",
+//       }}
+//     >
+//       <div>
+//         <button onClick={handleStepSub}>-</button>
+//         <span>Step: {step}</span>
+//         <button onClick={handleStepAdd}>+</button>
+//       </div>
+//       <div>
+//         <button onClick={handleCountSub}>-</button>
+//         <span>Count: {count}</span>
+//         <button onClick={handleCountAdd}>+</button>
+//       </div>
+//       <div>
+//         {count !== 0
+//           ? count > 0
+//             ? count + " days from today "
+//             : count * -1 + " days ago "
+//           : "Today"}{" "}
+//         is {currentDate.toDateString()}
+//       </div>
+//     </div>
+//   );
+// }
